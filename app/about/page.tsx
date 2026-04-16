@@ -113,6 +113,12 @@ export default function AboutPage() {
             <p className="font-sans text-muted-foreground leading-relaxed max-w-xl">
               Az alábbi űrlappal küldhet nekünk üzenetet. Szívesen fogadjuk a tartalmi pontossággal, szerkesztői javaslatokkal vagy általános visszajelzéssel kapcsolatos megkereséseket.
             </p>
+            <a
+              href="mailto:info@hungaryvrgamesblog.com"
+              className="font-mono text-xs tracking-wider text-primary hover:text-primary/80 transition-colors duration-200 break-all"
+            >
+              info@hungaryvrgamesblog.com
+            </a>
           </div>
           <ContactForm />
         </div>

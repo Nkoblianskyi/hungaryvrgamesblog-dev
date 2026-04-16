@@ -33,13 +33,13 @@ const gadgets = [
 
 export function GadgetsPreview() {
   return (
-    <section className="py-24 bg-card/30 border-y border-border">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="py-16 sm:py-24 bg-card/30 border-y border-border">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="flex items-end justify-between mb-12 flex-wrap gap-4">
+        <div className="flex items-end justify-between mb-8 sm:mb-12 flex-wrap gap-4">
           <div>
             <div className="font-mono text-xs text-primary tracking-widest mb-2">FEJEZET_B / HARDVER</div>
-            <h2 className="font-display text-3xl md:text-4xl tracking-tight text-balance">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl tracking-tight text-balance">
               VR eszközök áttekintése
             </h2>
           </div>
@@ -54,7 +54,7 @@ export function GadgetsPreview() {
         {/* Unique bento layout: 1 wide + 2 stacked */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
           {/* Wide card */}
-          <article className="md:col-span-3 card-glow relative overflow-hidden group flex flex-col min-h-[400px]">
+          <article className="md:col-span-3 card-glow relative overflow-hidden group flex flex-col min-h-[320px] sm:min-h-[400px]">
             <div className="absolute inset-0">
               <Image
                 src={gadgets[0].image}
@@ -64,19 +64,19 @@ export function GadgetsPreview() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-card via-card/70 to-transparent" />
             </div>
-            <div className="relative z-10 flex flex-col justify-end flex-1 p-8 gap-3">
+            <div className="relative z-10 flex flex-col justify-end flex-1 p-5 sm:p-8 gap-2.5 sm:gap-3">
               <span className="font-mono text-xs tracking-widest text-primary border border-primary/30 px-2 py-0.5 w-fit">
                 {gadgets[0].tag}
               </span>
-              <h3 className="font-display text-xl tracking-wide text-foreground">
+              <h3 className="font-display text-lg sm:text-xl tracking-wide text-foreground">
                 {gadgets[0].label}
               </h3>
-              <p className="font-sans text-sm text-muted-foreground leading-relaxed max-w-sm">
+              <p className="font-sans text-xs sm:text-sm text-muted-foreground leading-relaxed max-w-sm">
                 {gadgets[0].summary}
               </p>
               <Link
                 href="/gadgets"
-                className="font-mono text-xs tracking-widest uppercase text-primary/70 hover:text-primary transition-colors duration-200 mt-2"
+                className="font-mono text-[11px] sm:text-xs tracking-widest uppercase text-primary/70 hover:text-primary transition-colors duration-200 mt-2"
               >
                 Tovább olvasom
               </Link>
@@ -88,7 +88,7 @@ export function GadgetsPreview() {
             {gadgets.slice(1).map((gadget) => (
               <article
                 key={gadget.id}
-                className="card-glow relative overflow-hidden group flex-1 min-h-[190px] flex flex-col"
+                className="card-glow relative overflow-hidden group flex-1 min-h-[170px] sm:min-h-[190px] flex flex-col"
               >
                 <div className="absolute inset-0">
                   <Image
@@ -99,7 +99,7 @@ export function GadgetsPreview() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-transparent" />
                 </div>
-                <div className="relative z-10 flex flex-col justify-end flex-1 p-5 gap-2">
+                <div className="relative z-10 flex flex-col justify-end flex-1 p-4 sm:p-5 gap-1.5 sm:gap-2">
                   <span className="font-mono text-[10px] tracking-widest text-primary/70">
                     {gadget.tag}
                   </span>

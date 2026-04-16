@@ -23,8 +23,8 @@ export function Navbar() {
           <div className="w-8 h-8 border border-primary relative flex items-center justify-center">
             <div className="w-4 h-4 bg-primary/20 border border-primary/60 rotate-45 group-hover:bg-primary/40 transition-colors" />
           </div>
-          <span className="font-display text-sm tracking-widest text-foreground uppercase neon-text">
-            HungaryVR
+          <span className="font-display text-[11px] sm:text-sm tracking-[0.18em] sm:tracking-widest text-foreground uppercase neon-text">
+            HungaryVR Blog
           </span>
         </Link>
 

@@ -39,18 +39,18 @@ const facts = [
 
 export function FactsSection() {
   return (
-    <section className="py-24 max-w-6xl mx-auto px-6">
+    <section className="py-16 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6">
       {/* Header */}
-      <div className="flex items-start gap-6 mb-16">
+      <div className="flex items-start gap-4 sm:gap-6 mb-10 sm:mb-16">
         <div className="shrink-0 pt-1">
           <div className="font-mono text-xs text-primary tracking-widest mb-1">FEJEZET_C</div>
           <div className="w-12 h-px bg-primary" />
         </div>
         <div>
-          <h2 className="font-display text-3xl md:text-4xl tracking-tight text-balance mb-2">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl tracking-tight text-balance mb-2">
             Kulcstények a VR-ről
           </h2>
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground text-xs sm:text-sm">
             Ellenőrzött adatpontok, amelyek meghatározzák a virtuális valóság technológiájának jelenlegi állapotát.
           </p>
         </div>
@@ -61,29 +61,29 @@ export function FactsSection() {
         {facts.map((fact, i) => (
           <article
             key={fact.index}
-            className={`grid grid-cols-12 gap-4 group hover:bg-card/50 transition-colors duration-200
+            className={`grid grid-cols-12 gap-2 sm:gap-4 group hover:bg-card/50 transition-colors duration-200
               ${i % 2 === 0 ? "" : "bg-card/20"}`}
           >
             {/* Index column */}
-            <div className="col-span-2 md:col-span-1 flex items-center justify-center border-r border-border px-3 py-6">
+            <div className="col-span-2 md:col-span-1 flex items-center justify-center border-r border-border px-2 sm:px-3 py-4 sm:py-6">
               <span className="font-mono text-[10px] text-muted-foreground/40 tracking-widest rotate-90 md:rotate-0 whitespace-nowrap">
                 {fact.index}
               </span>
             </div>
 
             {/* Stat column */}
-            <div className="col-span-3 md:col-span-2 flex items-center border-r border-border px-4 py-6">
-              <span className="font-display text-2xl md:text-3xl neon-text leading-none group-hover:text-primary transition-colors duration-200">
+            <div className="col-span-3 md:col-span-2 flex items-center border-r border-border px-2 sm:px-4 py-4 sm:py-6">
+              <span className="font-display text-xl sm:text-2xl md:text-3xl neon-text leading-none group-hover:text-primary transition-colors duration-200">
                 {fact.stat}
               </span>
             </div>
 
             {/* Content column */}
-            <div className="col-span-7 md:col-span-9 flex flex-col justify-center px-5 py-6 gap-1.5">
-              <h3 className="font-display text-xs tracking-widest text-foreground uppercase">
+            <div className="col-span-7 md:col-span-9 flex flex-col justify-center px-3 sm:px-5 py-4 sm:py-6 gap-1.5">
+              <h3 className="font-display text-[10px] sm:text-xs tracking-widest text-foreground uppercase">
                 {fact.title}
               </h3>
-              <p className="font-sans text-sm text-muted-foreground leading-relaxed">
+              <p className="font-sans text-xs sm:text-sm text-muted-foreground leading-relaxed">
                 {fact.body}
               </p>
             </div>

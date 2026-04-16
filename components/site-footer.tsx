@@ -27,8 +27,8 @@ export function SiteFooter() {
               <div className="w-8 h-8 border border-primary relative flex items-center justify-center">
                 <div className="w-4 h-4 bg-primary/20 border border-primary/60 rotate-45 group-hover:bg-primary/40 transition-colors" />
               </div>
-              <span className="font-display text-sm tracking-widest neon-text uppercase">
-                HungaryVR
+              <span className="font-display text-[11px] sm:text-sm tracking-[0.18em] sm:tracking-widest neon-text uppercase">
+                HungaryVR Blog
               </span>
             </Link>
             <p className="font-mono text-xs text-muted-foreground leading-relaxed tracking-wide max-w-xs">
@@ -90,6 +90,12 @@ export function SiteFooter() {
                 <span>HU_KÖZÉP</span>
               </div>
             </div>
+            <a
+              href="mailto:info@hungaryvrgamesblog.com"
+              className="mt-3 font-mono text-xs tracking-wide text-muted-foreground hover:text-primary transition-colors duration-200 break-all"
+            >
+              info@hungaryvrgamesblog.com
+            </a>
           </div>
         </div>
 

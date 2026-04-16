@@ -27,18 +27,18 @@ const pillars = [
 
 export function WhatIsVR() {
   return (
-    <section id="what-is-vr" className="py-24 max-w-6xl mx-auto px-6">
+    <section id="what-is-vr" className="py-16 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6">
       {/* Section header */}
-      <div className="flex items-start gap-6 mb-16">
+      <div className="flex items-start gap-4 sm:gap-6 mb-10 sm:mb-16">
         <div className="shrink-0 pt-1">
           <div className="font-mono text-xs text-primary tracking-widest mb-1">FEJEZET_A</div>
           <div className="w-12 h-px bg-primary" />
         </div>
         <div>
-          <h2 className="font-display text-3xl md:text-4xl tracking-tight text-balance mb-4">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl tracking-tight text-balance mb-3 sm:mb-4">
             Mi a virtuális valóság?
           </h2>
-          <p className="text-muted-foreground leading-relaxed max-w-2xl">
+          <p className="text-sm sm:text-base text-muted-foreground leading-relaxed max-w-2xl">
             A virtuális valóság egy olyan technológia, amely számítógép által generált adatokkal
             helyettesíti az ember érzékszervi bemenetét, ezzel azt az élményt keltve, mintha
             fizikailag jelen lennénk egy szimulált környezetben. Nem egyetlen eszközről van szó,
@@ -52,7 +52,7 @@ export function WhatIsVR() {
         {pillars.map((pillar, i) => (
           <article
             key={pillar.code}
-            className={`p-8 flex gap-5 transition-colors duration-200 hover:bg-card/60
+            className={`p-5 sm:p-8 flex gap-4 sm:gap-5 transition-colors duration-200 hover:bg-card/60
               ${i % 2 === 0 ? "border-r-0 md:border-r border-b border-border" : "border-b border-border"}
               ${i >= pillars.length - 2 ? "border-b-0" : ""}
             `}
@@ -64,10 +64,10 @@ export function WhatIsVR() {
             </div>
             {/* Content */}
             <div className="flex flex-col gap-3">
-              <h3 className="font-display text-sm tracking-widest text-foreground uppercase">
+              <h3 className="font-display text-xs sm:text-sm tracking-widest text-foreground uppercase">
                 {pillar.title}
               </h3>
-              <p className="font-sans text-sm text-muted-foreground leading-relaxed">
+              <p className="font-sans text-xs sm:text-sm text-muted-foreground leading-relaxed">
                 {pillar.body}
               </p>
             </div>
